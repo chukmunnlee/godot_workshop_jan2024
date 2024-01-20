@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dduel6defdh7"]
+
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_6boha"]
+[ext_resource type="FontFile" uid="uid://bl38yd6a16k5b" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_387gd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nc5gj"]
+font = ExtResource("1_387gd")
+font_size = 32
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.678431)
+shadow_offset = Vector2(3, 3)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_6boha")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_nc5gj")

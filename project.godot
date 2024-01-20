@@ -13,6 +13,11 @@ config_version=5
 config/name="Generic 2D Platformer"
 run/main_scene="res://scenes/level_01.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://assets/icon.png"
+
+[autoload]
+
+GameManager="*res://singletons/game_manager.gd"
 
 [display]
 
@@ -44,6 +49,7 @@ jump={
 
 2d_physics/layer_1="platform"
 2d_physics/layer_2="ninja_frog"
+2d_physics/layer_3="fruits"
 
 [rendering]
 
