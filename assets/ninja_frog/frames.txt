@@ -1,0 +1,6 @@
+Ninja Frog: 32
+	fall: 0
+	hit: 1 - 7
+	idle: 8 - 18 = 11 frames
+	jump: 19
+	run: 20 - 31 = 12 frames
